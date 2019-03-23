@@ -5,4 +5,17 @@
 @import "minima";
 
 body {
+  background-color: #F7FFF6;
+  font-family: helvetica;
+}
+
+header {
+  font-family: helvetica;
+  text-transform: uppercase;
+}
+
+/*weird things happening with logo in header - is there an existing file in minima that is affecting its formatting?*/
+header img {
+  width: 5%;
+  margin: 10px auto 10px auto;
 }
