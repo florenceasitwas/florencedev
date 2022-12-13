@@ -1,0 +1,131 @@
+<!-- Header -->
+  <!-- <header id="header">
+    <a href="{{ '' | absolute_url }}" class="logo"><strong>{{ site.title }}</strong> {{ site.subtitle }}</a>
+    <ul class="icons">
+      {% if site.twitter_url %}
+      <li><a href="{{ site.twitter_url }}" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+      {% endif %}
+      {% if site.googleplus_url %}
+      <li><a href="{{ site.googleplus_url }}" class="icon fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
+      {% endif %}
+      {% if site.facebook_url %}
+      <li><a href="{{ site.facebook_url }}" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+      {% endif %}
+      {% if site.instagram_url %}
+      <li><a href="{{ site.instagram_url }}" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+      {% endif %}
+      {% if site.pinterest_url %}
+      <li><a href="{{ site.pinterest_url }}" class="icon fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
+      {% endif %}
+      {% if site.500px_url %}
+      <li><a href="{{ site.500px_url }}" class="icon fa-500px" target="_blank"><span class="label">500px</span></a></li>
+      {% endif %}
+      {% if site.gitlab_url %}
+      <li><a href="{{ site.gitlab_url }}" class="icon fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
+      {% endif %}
+      {% if site.github_url %}
+      <li><a href="{{ site.github_url }}" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+      {% endif %}
+      {% if site.slack_url %}
+      <li><a href="{{ site.slack_url }}" class="icon fa-slack" target="_blank"><span class="label">Slack</span></a></li>
+      {% endif %}
+      {% if site.linkedin_url %}
+      <li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+      {% endif %}
+    </ul>
+  </header> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="opacity: 1; background-color: white; position: fixed; width: 100%; top: 0; z-index: 5;" {% if page.url == "/index.html" %} class="alt"{% endif %}>
+    <a class="navbar-brand" href="{{ '' | absolute_url }}"><img src="/assets/images/logo_florence.png" alt="" width="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ '' | absolute_url }}">Home</a>
+          <!-- <span class="sr-only">(current)</span> --> <!-- inside the a -->
+        </li>
+        <li class="nav-item dropdown">
+          <a style="color: black;" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a style="color: black;" class="dropdown-item" href="{{ 'about.html' | absolute_url }}">Eng</a><hr /><a class="dropdown-item" href="{{ 'about_it.html' | absolute_url }}">Italian</a>'
+            <a style="color: black;" class="dropdown-item" href="{{ 'affiliations.html' | absolute-url }}">Affiliations</a>
+            <a style="color: black;" class="dropdown-item" href="{{ 'blog.html' | absolute_url }}">Blog</a>
+            <a style="color: black;" class="dropdown-item" href="{{ 'contributors.html' | absolute_url }}">Contributors</a>
+            <a style="color: black;" class="dropdown-item" href="{{ 'methodology.html' | absolute_url }}">Methodology</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a style="color: black;" class="nav-link" href="{{ 'maps.html' | absolute_url }}">Maps & Data</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="color: black;" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Models
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a style="color: black;" class="dropdown-item" href="{{ '3d_models.html' | absolute_url }}">3D models + instructions</a>
+            <a style="color: black;" class="dropdown-item" href="https://sketchfab.com/FLAW/collections">Sketchfab Collections</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="color: black;" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Encyclopedia
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a style="color: black;" class="dropdown-item" href="{{ 'encyclopedia.html' | absolute_url }}">Encyclopedia Fiorentina</a>
+            <a style="color: black;" class="dropdown-item" href="{{ '19th-century-views-of-florence.html' | absolute_url }}">19th Century Views of Florence</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+        {% if page.url != "/search.html" %}
+        <form id="search" style="display: contents;" class="nav-item form-inline" action="search.html">
+          <input id="search-input" style="display: initial; width: auto;" type="text" name="query" placeholder="Quick search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <a href="{{ 'search.html' | absolute_url }}"><button style="font-size: revert;" class="btn btn-outline-success"><i class="fa fa-search"></i></button></a>
+        </form>
+        {% endif %}
+          <!-- <input style="width: auto !important; float: left;" type="text" name="query" id="search-input" placeholder="Quick search" />
+          <a class="nav-link" style="float:left;" href="{{ 'search.html' | absolute_url }}"><button type="submit"><i class="fa fa-search"></i></button></a> -->
+      </ul>
+    </div>
+    <!-- {% include menu.html %} -->
+  </nav>
+  <div style="padding: 5em;" id="page-wrapper">
+    <ul id="results-container"></ul>
+    <!-- Header -->
+    <!-- <section id="banner">
+      <h2>{{ site.title }}</h2>
+      <p>{{ site.subtitle }}</p>
+      <ul class="actions">
+        <li><a href="#" class="button special">Sign Up</a></li>
+        <li><a href="#" class="button">Learn More</a></li>
+      </ul>
+    </section> -->
+    <!-- {% if page.layout == "default" %}
+    <section id="banner">
+      <h2>{{ site.title }}</h2>
+      <p>{{ site.subtitle }}</p>
+      <ul class="actions">
+        <li><a href="#" class="button special">Sign Up</a></li>
+        <li><a href="#" class="button">Learn More</a></li>
+      </ul>
+    </section>
+    {% else %}
+    <section id="main" class="container">
+      <header>
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.description }}</p>
+      </header>
+    {% endif %} -->
+    <div class="box">
+    

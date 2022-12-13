@@ -1,0 +1,40 @@
+<!-- Banner -->
+  <section style="display: block;" id="banner">
+    <header style="margin-top: -8em; margin-bottom: 2em;" id="header">
+      <a style="text-align: left;" href="https://florenceasitwas.wlu.edu/" class="logo"><strong>Florence As It Was:</strong> the Digital Reconstruction of a Medieval City</a>
+      <ul class="icons">
+        <li><a href="https://twitter.com/florenceasitwas" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+        <li><a href="https://github.com/florenceasitwas" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li> 
+      </ul>
+    </header>
+    <span style="display: flex;">
+      <div class="content" id="overview">
+        <p>Welcome to Florence As It Was, a digital project that aims to reconstruct the city the way it appeared at the end of the fifteenth century. Here you can review, inspect, tour, and visit the streets, palaces, churches, shops, and offices that formed the fabric of one of Europe’s most vibrant cities. Here you will find images, people, payments, relationships, literary references, contemporary descriptions, and sometimes even music related to the individual structures that shaped a Florentine’s daily experience in 1500. </p><p>Here you can read, in English, the Italian and German interpretations of these people and places that were written by critics and scholars in the 17th, 18th, and 20th centuries. See the seat of government and power in the late Middle Ages. Walk through the streets and buildings where Cosimo de’ Medici spent much of his time. Examine the most important cult painting in the city and the tabernacle that framed it. Zoom in close, fly high above, or approach these places from below. Search for names, places, dates, and events, and see how links and connections can be made in unexpected ways. Above all, imagine.
+        </p>
+        <p>There’s a lot of information and a lot of data in these sites, so have patience while they load. It’s worth the wait.</p>
+        <ul class="actions">
+          <li><a href="{{ 'about.html' | absolute_url }}" class="button small">Learn More</a></li>
+        </ul>
+      </div>
+      <span class="image object">
+        <a href="{{ 'maps.html' | absolute_url }}"><img src="assets/images/map_screenshot.jpg" alt="" /></a>
+      </span>
+    </span>
+  </section>
+  <section>
+    <header class="major">
+      <h2>Recent Posts</h2>
+    </header>
+    <div class="mini-posts">
+        {% for post in site.posts limit:1 %}
+        <article>
+          <h3>{{ post.title }}</h3>
+          {{ post.excerpt }}
+        </article>
+        {% endfor %}
+    </div>
+    <br/>
+    <ul style="margin-bottom: 2em;" class="actions">
+      <li><a href="{{ 'blog.html' | absolute_url }}" class="button">More</a></li>
+    </ul>
+  </section>
