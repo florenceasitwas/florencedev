@@ -1,0 +1,36 @@
+<footer style="display: block;" id="header" class="navbar navbar-light bg-light">
+  <ul style="list-style: none; display: inline-flex;" class="contacts">
+    <li><a class="fa fa-envelope-o" href="mailto:{{ site.email }}"></a> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    <li><a class="fa fa-envelope" href="mailto:{{ site.email2 }}"></a> <a href="mailto:{{ site.email2 }}">{{ site.email2 }}</a></li>
+  </ul>
+  <ul style="list-style: none; display: inline;" class="contacts">
+    <li><a class="fa fa-phone"></a> <span>{{ site.phone }}</span></li>
+    <li><a class="fa fa-home"></a> <span>{{ site.street_address }}, {{ site.city }}, {{ site.state }} {{ site.zip_code }}, {{ site.country }}</span></li>
+  </ul>
+  <ul style="display: inline;" class="contacts">
+    <li>© {{ site.title }} All rights reserved.</li>
+  </ul>
+</footer>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="{{ 'assets/js/jquery.min.js' | absolute_url }}"></script>
+  <script src="{{ 'assets/js/skel.min.js' | absolute_url }}"></script>
+  <script src="{{ 'assets/js/util.js' | absolute_url }}"></script>
+  <!--[if lte IE 8]><script src="{{ 'assets/js/ie/respond.min.js' | absolute_url }}"></script><![endif]-->
+  <script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}?query={query}" >{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+    This layout exists for the search.html page and includes a copy of the search script that is separate from the sidebar script (in the sidebar layout). I've removed the sidebar search box because the scripts were interfering with each other. MKB 2/25/22 in Firenze! 
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                {% include header.html %}
+
+                {{ content }}
+
+            </div>
+        </div>
+    </div>
+<!-- Scripts -->
+  <script src="{{ 'assets/js/jquery.min.js' | absolute_url }}"></script>
+  <script src="{{ 'assets/js/skel.min.js' | absolute_url }}"></script>
+  <script src="{{ 'assets/js/util.js' | absolute_url }}"></script>
+  <!--[if lte IE 8]><script src="{{ 'assets/js/ie/respond.min.js' | absolute_url }}"></script><![endif]-->
+  <script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+    function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    document.getElementById('search-input').value = getParameterByName('query');
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('full-results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}?query={query}" >{title}</a></li><p>{excerpt}</p>',
+        noResultsText: 'No results found',
+        limit: 50,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+      setTimeout(() => {
+        window.simpleJekyllSearch.search(document.getElementById('search-input').value)
+      }, 100);
+</script>
+
+
+</body>
+
+</html>
